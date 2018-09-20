@@ -257,6 +257,8 @@ class App extends React.Component {
   increaseRotation() {
     const rotation = (this.state.rotation + 90) % 450;
     this.setState({ rotation });
+
+    player.children[0].style.transform = "rotate("+rotation+"deg)";
   }
 
   toggleCaptureFormat() {
